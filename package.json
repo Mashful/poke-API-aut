@@ -1,0 +1,22 @@
+{
+  "name": "poke-api-aut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mashful/poke-API-aut.git"
+  },
+  "author": "mercy akinwale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mashful/poke-API-aut/issues"
+  },
+  "homepage": "https://github.com/Mashful/poke-API-aut#readme",
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
+  }
+}
