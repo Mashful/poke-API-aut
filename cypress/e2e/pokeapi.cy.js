@@ -1,4 +1,4 @@
-it.only('Users should be able to get providers ', () => {
+it.only('GET API testing Using Cypress API Plugin', () => {
 
     cy.api({
         method: 'GET',
