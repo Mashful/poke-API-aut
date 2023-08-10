@@ -5,6 +5,6 @@ it.only('GET API testing Using Cypress API Plugin', () => {
         url: 'https://pokeapi.co/api/v2/pokemon/ditto',
     }).then((res) => {
         expect(res.status).to.eq(200);
-    })
-})
+    });
+});
 
