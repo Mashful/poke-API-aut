@@ -1,28 +1,19 @@
-name: Cypress Pipeline
+name: Cypress Tests using Cypress Docker Image
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  cypress:
+  cypress-run:
     runs-on: ubuntu-latest
-
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: npm run --config cypress.config.js
+        uses: cypress-io/github-action@v4
         with:
-          node-version: 14
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run API tests
-        run: npx cypress run --headless --config-file cypress.config.js
+          # Specify Browser 
+          browser: chrome
