@@ -1,5 +1,10 @@
-it("GET API testing Using Cypress API Plugin", () => {
-  cy.api("GET", "https://pokeapi.co/api/v2/pokemon/ditto").should((response) => {
-    expect(response.status).to.eq(200);
-});
-});
+it.only('Users should be able to get providers ', () => {
+
+    cy.api({
+        method: 'GET',
+        url: 'https://pokeapi.co/api/v2/pokemon/ditto',
+    }).then((res) => {
+        expect(res.status).to.eq(200);
+    })
+})
+
